@@ -1,0 +1,36 @@
+.btns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-bottom: 50px;
+}
+
+.btn {
+    margin: 5px;
+    padding: 5px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.title {
+    text-align: center;
+}
+
+.all {
+    margin: 0 auto;
+}
