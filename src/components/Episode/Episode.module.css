@@ -1,0 +1,54 @@
+h3, h2 {
+    margin: 0;
+    padding: 10px;
+}
+
+p {
+    margin: 5px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 10px;
+    transition: 0.4s all ease;
+}
+
+.card:hover {
+    background-color: gray;
+    color: #FFF;
+    transform: scale(0.9);
+}
+
+.after__title {
+    text-align: center;
+    font-size: 16px;
+}
+
+.all {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.loading {
+    font-size: 52px;
+    margin: 0 auto;
+}
+
+.episode {
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
