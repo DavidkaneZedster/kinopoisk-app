@@ -4,6 +4,7 @@ import { AllHero } from "./components/AllHero/AllHero.jsx";
 import { Episode } from "./components/Episode/Episode.jsx";
 import { Location } from "./components/Location/Location.jsx";
 import { Main } from "./components/Main/Main.jsx";
+import { Favourites } from "./components/Favourites/Favourites.jsx";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/hero" element={<AllHero />} />
                 <Route path="/episode" element={<Episode />} />
                 <Route path="/location" element={<Location />} />
+                <Route path="/favourites" element={<Favourites />} />
             </Routes>
         </div>
     );

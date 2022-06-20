@@ -33,11 +33,18 @@ export const AllHero = () => {
                         <div className={styles.card} key={serial.id}>
                             <h2 className={styles.title}>{serial.name}</h2>
                             <img
+                                className={styles.hero__img}
                                 width={"150px"}
                                 height={"150px"}
                                 src={serial.image}
                                 alt="description"
                             />
+                            <label className={styles.label}>
+                                <input
+                                    className={styles.input}
+                                    type="checkbox"
+                                />
+                            </label>
                         </div>
                     ))
                 )}

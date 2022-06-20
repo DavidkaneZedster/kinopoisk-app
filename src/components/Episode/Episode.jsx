@@ -42,6 +42,12 @@ export const Episode = () => {
                             <p className={styles.episode}>
                                 Номер эпизода: {episode.episode}
                             </p>
+                            <label>
+                                <input
+                                    className={styles.input}
+                                    type="checkbox"
+                                />
+                            </label>
                         </div>
                     ))
                 )}
