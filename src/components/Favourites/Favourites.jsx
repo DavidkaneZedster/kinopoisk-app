@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 export const Favourites = () => {
     const storeData = useSelector((state) => state.favouritesReducer);
+    console.log(storeData);
 
     return (
         <>

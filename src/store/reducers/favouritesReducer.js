@@ -1,20 +1,21 @@
-import {
-    ADD_TO_FAVOURITES,
-    REMOVE_FROM_FAVOURITES,
-} from "../constans/actionTypes";
+import { SET_FAVOURITES } from "../constans/actionTypes";
 
-const favouritesReducer = (state, action) => {
+const initialState = {
+    favoutites: [],
+};
+
+const favouritesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_TO_FAVOURITES:
+        case SET_FAVOURITES:
             return {
                 ...state,
-                ...action.payload,
+                favourites: action.payload,
             };
-        case REMOVE_FROM_FAVOURITES:
-            return {
-                ...state,
-                ...action.payload,
-            };
+        // case REMOVE_FROM_FAVOURITES:
+        //     return {
+        //         ...state,
+        //         favourites:action.payload,
+        //     };
         default:
             return state;
     }
