@@ -43,6 +43,12 @@ export const Location = () => {
                                     loc.dimension
                                 )}
                             </p>
+                            <label>
+                                <input
+                                    className={styles.input}
+                                    type="checkbox"
+                                />
+                            </label>
                         </div>
                     ))
                 )}
