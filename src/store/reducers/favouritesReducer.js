@@ -1,4 +1,7 @@
-import { SET_FAVOURITES } from "../constans/actionTypes";
+import {
+    REMOVE_FROM_FAVOURITES,
+    SET_FAVOURITES,
+} from "../constans/actionTypes";
 
 const initialState = {
     favourites: [],
@@ -9,13 +12,20 @@ const favouritesReducer = (state = initialState, action) => {
         case SET_FAVOURITES:
             return {
                 ...state,
-                favourites: action.payload,
+                favourites: [
+                    ...state.favourites.filter(
+                        (item) => item !== action.payload
+                    ),
+                    action.payload,
+                ],
             };
-        // case REMOVE_FROM_FAVOURITES:
-        //     return {
-        //         ...state,
-        //         favourites:action.payload,
-        //     };
+        case REMOVE_FROM_FAVOURITES:
+            return {
+                ...state,
+                favourites: state.favourites.filter(
+                    (item) => item !== action.payload
+                ),
+            };
         default:
             return state;
     }

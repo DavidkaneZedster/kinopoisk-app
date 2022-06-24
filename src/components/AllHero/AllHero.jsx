@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./AllHero.module.css";
 import { fetchHero } from "../../api/FetchSerials.js";
-import { useSelector } from "react-redux";
 import { useAction } from "../../hooks/useAction";
 
 export const AllHero = () => {
     const [hero, setHero] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const { setFavourites } = useAction();
-    const { favourites } = useSelector((store) => store.favourite);
 
     const getSerials = async (params) => {
         try {
@@ -21,10 +19,6 @@ export const AllHero = () => {
             setIsLoading(false);
         }
     };
-
-    useEffect(() => {
-        console.log("favourites", favourites);
-    }, [favourites]);
 
     useEffect(() => {
         getSerials();
@@ -46,8 +40,20 @@ export const AllHero = () => {
                                 src={serial.image}
                                 alt="description"
                             />
-                            <button onClick={() => setFavourites(serial)}>
-                                Избранное(toggle)
+                            <button
+                                style={{
+                                    padding: "5px 10px",
+                                    marginBottom: "5px",
+                                }}
+                                onClick={() => setFavourites(serial)}
+                            >
+                                Add favourites
+                            </button>
+                            <button
+                                style={{ padding: "5px 10px" }}
+                                onClick={() => setFavourites(serial)}
+                            >
+                                Delete from favourites
                             </button>
                         </div>
                     ))
