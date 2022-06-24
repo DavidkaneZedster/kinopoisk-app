@@ -1,7 +1,7 @@
 import { SET_FAVOURITES } from "../constans/actionTypes";
 
 const initialState = {
-    favoutites: [],
+    favourites: [],
 };
 
 const favouritesReducer = (state = initialState, action) => {
